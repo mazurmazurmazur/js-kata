@@ -1,0 +1,17 @@
+html, body{
+    margin:0;
+    padding: 0;
+}
+
+
+#cookieInfoBar{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 20vh;
+    background: crimson;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    color: white;
+}
