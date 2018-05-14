@@ -7,11 +7,29 @@ html, body{
 #cookieInfoBar{
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: 94vw;
     height: 20vh;
     background: crimson;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     color: white;
+    left: 3vw;
+    overflow: hidden;
+    text-align: center;
+    font-size: 20px;
+    transform: translateY(25vh);
+    transition: 2s ease-in-out;
+}
+
+#acceptButton{
+    border-style: solid;
+    border-width: 10px;
+    background: white;
+    border-color: black;
+    color: crimson;
+    width: 20vw;
+    left: 40vw;
+    position: relative;
+    cursor: pointer;
 }
