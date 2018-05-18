@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To-do list</title>
+    <title>w20wednesday</title>
+    <script src="Speak.js"></script>
 </head>
 <body>
-    <h1>My To-do list</h1>
+        <h1>My To-do list</h1>
     <ul>
         <li>Pick up the kids</li>
         <li>Buy milk</li>
@@ -17,5 +18,25 @@
         <li>Ignore the kids</li>
         <li>Feed the cat</li>
     </ul>
+
+
+    <h1>Speech API</h1>
+    <p>Make sure your audio is on, then...</p>
+    <button>Press me :-)</button>
+    <script>
+        let speech = new Speak();
+    document.querySelector("button").addEventListener("click",e=>{
+        speech.setVoice(51)
+        let allLis = document.querySelectorAll("li");
+        let substring = "kids"
+        for(let i = 0; i<allLis.length; i++){
+            if(!allLis[i].textContent.includes(substring)){
+                speech.speak(allLis[i].textContent);
+            }
+        }
+
+        //console.log(speech.getVoices(true))
+    })
+    </script>
 </body>
 </html>
